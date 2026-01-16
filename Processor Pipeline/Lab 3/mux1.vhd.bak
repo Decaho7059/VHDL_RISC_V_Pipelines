@@ -1,0 +1,19 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY mux_1_2 IS
+	PORT (
+		a,b : IN STD_LOGIC_VECTOR ;
+		sel : IN STD_LOGIC;
+		y : OUT STD_LOGIC
+	);
+END mux_1_2;
+
+ARCHITECTURE struct OF mux_1_2 IS
+SIGNAL int_sig1,int_sig2 : STD_LOGIC_VECTOR ;
+BEGIN
+	int_sig1 <= A NAND (NOT sel);
+	int_sig2 <= B NAND sel;
+	y <= int_sig1 NAND int_sig2;
+END struct;
