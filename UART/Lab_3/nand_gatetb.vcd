@@ -1,0 +1,45 @@
+$date
+  Sun Nov 06 12:54:32 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module nand_gatetb $end
+$var reg 1 ! x_nand $end
+$var reg 1 " y_nand $end
+$var reg 1 # out_nand $end
+$scope module nandgate $end
+$var reg 1 $ x_nand $end
+$var reg 1 % y_nand $end
+$var reg 1 & out_nand $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+1#
+0$
+0%
+1&
+#20000000
+1"
+1%
+#40000000
+1!
+0"
+1$
+0%
+#60000000
+1"
+0#
+1%
+0&
+#80000000

@@ -1,0 +1,47 @@
+$date
+  Wed Nov 02 21:35:18 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module xor_gatetb $end
+$var reg 1 ! x $end
+$var reg 1 " y $end
+$var reg 1 # output $end
+$scope module xorgate $end
+$var reg 1 $ x_xor $end
+$var reg 1 % y_xor $end
+$var reg 1 & z_xor $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+0#
+0$
+0%
+0&
+#10000000
+1"
+1#
+1%
+1&
+#20000000
+1!
+0"
+1$
+0%
+#30000000
+1"
+0#
+1%
+0&
+#40000000

@@ -1,0 +1,45 @@
+$date
+  Sat Nov 05 19:15:27 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module nor_gatetb $end
+$var reg 1 ! x_nor $end
+$var reg 1 " y_nor $end
+$var reg 1 # z_nor $end
+$scope module norgate $end
+$var reg 1 $ x_nor $end
+$var reg 1 % y_nor $end
+$var reg 1 & z_nor $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+1#
+0$
+0%
+1&
+#20000000
+1"
+0#
+1%
+0&
+#40000000
+1!
+0"
+1$
+0%
+#60000000
+1"
+1%
+#80000000

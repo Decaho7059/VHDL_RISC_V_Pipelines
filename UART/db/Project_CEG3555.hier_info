@@ -1,0 +1,464 @@
+|uart
+selMux8b[0] => mux81_8b:mux81_8b0.sel0
+selMux8b[1] => mux81_8b:mux81_8b0.sel1
+selMux8b[2] => mux81_8b:mux81_8b0.sel2
+rs => reg8b:reg8b0.i_enable
+rs => compt4bits:compt4bits0.reset
+clk => reg8b:reg8b0.i_clock
+clk => compt4bits:compt4bits0.clk
+reset => reg8b:reg8b0.i_resetBar
+selMux1b[0] <= compt4bits:compt4bits0.q[0]
+selMux1b[1] <= compt4bits:compt4bits0.q[1]
+selMux1b[2] <= compt4bits:compt4bits0.q[2]
+selMux1b[3] <= compt4bits:compt4bits0.q[3]
+txd <= mux161_1b:mux1610.s
+
+
+|uart|mux81_8b:mux81_8b0
+sel0 => mux81_1b:mux81_1b_0.sel0
+sel0 => mux81_1b:mux81_1b_1.sel0
+sel0 => mux81_1b:mux81_1b_2.sel0
+sel0 => mux81_1b:mux81_1b_3.sel0
+sel0 => mux81_1b:mux81_1b_4.sel0
+sel0 => mux81_1b:mux81_1b_5.sel0
+sel0 => mux81_1b:mux81_1b_6.sel0
+sel0 => mux81_1b:mux81_1b_7.sel0
+sel1 => mux81_1b:mux81_1b_0.sel1
+sel1 => mux81_1b:mux81_1b_1.sel1
+sel1 => mux81_1b:mux81_1b_2.sel1
+sel1 => mux81_1b:mux81_1b_3.sel1
+sel1 => mux81_1b:mux81_1b_4.sel1
+sel1 => mux81_1b:mux81_1b_5.sel1
+sel1 => mux81_1b:mux81_1b_6.sel1
+sel1 => mux81_1b:mux81_1b_7.sel1
+sel2 => mux81_1b:mux81_1b_0.sel2
+sel2 => mux81_1b:mux81_1b_1.sel2
+sel2 => mux81_1b:mux81_1b_2.sel2
+sel2 => mux81_1b:mux81_1b_3.sel2
+sel2 => mux81_1b:mux81_1b_4.sel2
+sel2 => mux81_1b:mux81_1b_5.sel2
+sel2 => mux81_1b:mux81_1b_6.sel2
+sel2 => mux81_1b:mux81_1b_7.sel2
+s[0] <= mux81_1b:mux81_1b_0.s
+s[1] <= mux81_1b:mux81_1b_1.s
+s[2] <= mux81_1b:mux81_1b_2.s
+s[3] <= mux81_1b:mux81_1b_3.s
+s[4] <= mux81_1b:mux81_1b_4.s
+s[5] <= mux81_1b:mux81_1b_5.s
+s[6] <= mux81_1b:mux81_1b_6.s
+s[7] <= mux81_1b:mux81_1b_7.s
+
+
+|uart|mux81_8b:mux81_8b0|mux81_1b:mux81_1b_0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d0 => s.IN1
+d1 => s.IN1
+d2 => s.IN1
+d3 => s.IN1
+d4 => s.IN1
+d5 => s.IN1
+d6 => s.IN1
+d7 => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|mux81_8b:mux81_8b0|mux81_1b:mux81_1b_1
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d0 => s.IN1
+d1 => s.IN1
+d2 => s.IN1
+d3 => s.IN1
+d4 => s.IN1
+d5 => s.IN1
+d6 => s.IN1
+d7 => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|mux81_8b:mux81_8b0|mux81_1b:mux81_1b_2
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d0 => s.IN1
+d1 => s.IN1
+d2 => s.IN1
+d3 => s.IN1
+d4 => s.IN1
+d5 => s.IN1
+d6 => s.IN1
+d7 => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|mux81_8b:mux81_8b0|mux81_1b:mux81_1b_3
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d0 => s.IN1
+d1 => s.IN1
+d2 => s.IN1
+d3 => s.IN1
+d4 => s.IN1
+d5 => s.IN1
+d6 => s.IN1
+d7 => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|mux81_8b:mux81_8b0|mux81_1b:mux81_1b_4
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d0 => s.IN1
+d1 => s.IN1
+d2 => s.IN1
+d3 => s.IN1
+d4 => s.IN1
+d5 => s.IN1
+d6 => s.IN1
+d7 => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|mux81_8b:mux81_8b0|mux81_1b:mux81_1b_5
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d0 => s.IN1
+d1 => s.IN1
+d2 => s.IN1
+d3 => s.IN1
+d4 => s.IN1
+d5 => s.IN1
+d6 => s.IN1
+d7 => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|mux81_8b:mux81_8b0|mux81_1b:mux81_1b_6
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d0 => s.IN1
+d1 => s.IN1
+d2 => s.IN1
+d3 => s.IN1
+d4 => s.IN1
+d5 => s.IN1
+d6 => s.IN1
+d7 => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|mux81_8b:mux81_8b0|mux81_1b:mux81_1b_7
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel2 => s.IN0
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d0 => s.IN1
+d1 => s.IN1
+d2 => s.IN1
+d3 => s.IN1
+d4 => s.IN1
+d5 => s.IN1
+d6 => s.IN1
+d7 => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|reg8b:reg8b0
+i_d[0] => bascDReset:bascD0.i_d
+i_d[1] => bascDReset:bascD1.i_d
+i_d[2] => bascDReset:bascD2.i_d
+i_d[3] => bascDReset:bascD3.i_d
+i_d[4] => bascDReset:bascD4.i_d
+i_d[5] => bascDReset:bascD5.i_d
+i_d[6] => bascDReset:bascD6.i_d
+i_d[7] => bascDReset:bascD7.i_d
+i_enable => bascDReset:bascD0.i_enable
+i_enable => bascDReset:bascD1.i_enable
+i_enable => bascDReset:bascD2.i_enable
+i_enable => bascDReset:bascD3.i_enable
+i_enable => bascDReset:bascD4.i_enable
+i_enable => bascDReset:bascD5.i_enable
+i_enable => bascDReset:bascD6.i_enable
+i_enable => bascDReset:bascD7.i_enable
+i_resetBar => bascDReset:bascD0.i_resetBar
+i_resetBar => bascDReset:bascD1.i_resetBar
+i_resetBar => bascDReset:bascD2.i_resetBar
+i_resetBar => bascDReset:bascD3.i_resetBar
+i_resetBar => bascDReset:bascD4.i_resetBar
+i_resetBar => bascDReset:bascD5.i_resetBar
+i_resetBar => bascDReset:bascD6.i_resetBar
+i_resetBar => bascDReset:bascD7.i_resetBar
+i_clock => bascDReset:bascD0.i_clock
+i_clock => bascDReset:bascD1.i_clock
+i_clock => bascDReset:bascD2.i_clock
+i_clock => bascDReset:bascD3.i_clock
+i_clock => bascDReset:bascD4.i_clock
+i_clock => bascDReset:bascD5.i_clock
+i_clock => bascDReset:bascD6.i_clock
+i_clock => bascDReset:bascD7.i_clock
+o_q[0] <= bascDReset:bascD0.o_q
+o_q[1] <= bascDReset:bascD1.o_q
+o_q[2] <= bascDReset:bascD2.o_q
+o_q[3] <= bascDReset:bascD3.o_q
+o_q[4] <= bascDReset:bascD4.o_q
+o_q[5] <= bascDReset:bascD5.o_q
+o_q[6] <= bascDReset:bascD6.o_q
+o_q[7] <= bascDReset:bascD7.o_q
+
+
+|uart|reg8b:reg8b0|bascDReset:bascD0
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|reg8b:reg8b0|bascDReset:bascD1
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|reg8b:reg8b0|bascDReset:bascD2
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|reg8b:reg8b0|bascDReset:bascD3
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|reg8b:reg8b0|bascDReset:bascD4
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|reg8b:reg8b0|bascDReset:bascD5
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|reg8b:reg8b0|bascDReset:bascD6
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|reg8b:reg8b0|bascDReset:bascD7
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|mux161_1b:mux1610
+sel3 => s.IN0
+sel3 => s.IN0
+sel3 => s.IN0
+sel3 => s.IN0
+sel2 => s.IN1
+sel2 => s.IN1
+sel2 => s.IN1
+sel2 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel1 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+sel0 => s.IN1
+d[0] => s.IN1
+d[1] => s.IN1
+d[2] => s.IN1
+d[3] => s.IN1
+d[4] => s.IN1
+d[5] => s.IN1
+d[6] => s.IN1
+d[7] => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|compt4bits:compt4bits0
+clk => bascDReset:basc0.i_clock
+clk => bascDReset:basc1.i_clock
+clk => bascDReset:basc2.i_clock
+clk => bascDReset:basc3.i_clock
+reset => bascDReset:basc0.i_resetBar
+reset => bascDReset:basc1.i_resetBar
+reset => bascDReset:basc2.i_resetBar
+reset => bascDReset:basc3.i_resetBar
+q[0] <= bascDReset:basc0.o_q
+q[1] <= bascDReset:basc1.o_q
+q[2] <= bascDReset:basc2.o_q
+q[3] <= bascDReset:basc3.o_q
+
+
+|uart|compt4bits:compt4bits0|bascDReset:basc0
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|compt4bits:compt4bits0|bascDReset:basc1
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|compt4bits:compt4bits0|bascDReset:basc2
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|compt4bits:compt4bits0|bascDReset:basc3
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+

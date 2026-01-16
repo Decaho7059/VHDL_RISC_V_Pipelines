@@ -1,0 +1,355 @@
+$date
+  Tue Nov 08 20:26:32 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module countertb $end
+$var reg 1 ! gclock $end
+$var reg 1 " enable $end
+$var reg 1 # done $end
+$var reg 4 $ d_input[3:0] $end
+$var reg 4 % d_out[3:0] $end
+$scope module countertest $end
+$var reg 1 & gclock $end
+$var reg 1 ' enable $end
+$var reg 4 ( d_input[3:0] $end
+$var reg 4 ) d_out[3:0] $end
+$var reg 1 * done $end
+$var reg 1 + ynext0 $end
+$var reg 1 , ynext1 $end
+$var reg 1 - ynext2 $end
+$var reg 1 . ynext3 $end
+$var reg 1 / count0 $end
+$var reg 1 0 count1 $end
+$var reg 1 1 count2 $end
+$var reg 1 2 count3 $end
+$var reg 1 3 z $end
+$var reg 1 4 yinput0 $end
+$var reg 1 5 yinput1 $end
+$var reg 1 6 yinput2 $end
+$var reg 1 7 yinput3 $end
+$var reg 1 8 qbar0 $end
+$var reg 1 9 qbar1 $end
+$var reg 1 : qbar2 $end
+$var reg 1 ; qbar3 $end
+$scope module dflipflop0 $end
+$var reg 1 < i_d $end
+$var reg 1 = i_clock $end
+$var reg 1 > o_q $end
+$var reg 1 ? o_qbar $end
+$var reg 1 @ int_q $end
+$var reg 1 A int_qbar $end
+$var reg 1 B int_d $end
+$var reg 1 C int_dbar $end
+$var reg 1 D int_notd $end
+$var reg 1 E int_notclock $end
+$scope module first $end
+$var reg 1 F i_set $end
+$var reg 1 G i_reset $end
+$var reg 1 H i_enable $end
+$var reg 1 I o_q $end
+$var reg 1 J o_qbar $end
+$var reg 1 K int_q $end
+$var reg 1 L int_qbar $end
+$var reg 1 M int_ssignal $end
+$var reg 1 N int_rsignal $end
+$upscope $end
+$scope module second $end
+$var reg 1 O i_set $end
+$var reg 1 P i_reset $end
+$var reg 1 Q i_enable $end
+$var reg 1 R o_q $end
+$var reg 1 S o_qbar $end
+$var reg 1 T int_q $end
+$var reg 1 U int_qbar $end
+$var reg 1 V int_ssignal $end
+$var reg 1 W int_rsignal $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+1!
+1"
+U#
+b1111 $
+b000U %
+1&
+1'
+b1111 (
+b000U )
+U*
+U+
+U,
+1-
+1.
+U/
+U0
+U1
+U2
+U3
+U4
+15
+16
+17
+U8
+U9
+U:
+U;
+U<
+1=
+U>
+U?
+U@
+UA
+UB
+UC
+UD
+0E
+UF
+UG
+0H
+UI
+UJ
+UK
+UL
+1M
+1N
+UO
+UP
+1Q
+UR
+US
+UT
+UU
+UV
+UW
+#10000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#20000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#30000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#40000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#50000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#60000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#70000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#80000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#90000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#100000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#110000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#120000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#130000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#140000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#150000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#160000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#170000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#180000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW
+#190000000
+0!
+0&
+0=
+1E
+1H
+UM
+UN
+0Q
+1V
+1W
+#200000000
+1!
+1&
+1=
+0E
+0H
+1M
+1N
+1Q
+UV
+UW

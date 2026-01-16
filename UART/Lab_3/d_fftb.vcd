@@ -1,0 +1,457 @@
+$date
+  Thu Nov 10 10:33:47 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module d_fftb $end
+$var reg 1 ! i_d $end
+$var reg 1 " i_clock $end
+$var reg 1 # o_q $end
+$var reg 1 $ o_qbar $end
+$scope module flipflop $end
+$var reg 1 % i_d $end
+$var reg 1 & i_clock $end
+$var reg 1 ' o_q $end
+$var reg 1 ( o_qbar $end
+$var reg 1 ) int_q $end
+$var reg 1 * int_qbar $end
+$var reg 1 + int_d $end
+$var reg 1 , int_dbar $end
+$var reg 1 - int_notd $end
+$var reg 1 . int_notclock $end
+$scope module first $end
+$var reg 1 / i_set $end
+$var reg 1 0 i_reset $end
+$var reg 1 1 i_enable $end
+$var reg 1 2 o_q $end
+$var reg 1 3 o_qbar $end
+$var reg 1 4 int_q $end
+$var reg 1 5 int_qbar $end
+$var reg 1 6 int_ssignal $end
+$var reg 1 7 int_rsignal $end
+$upscope $end
+$scope module second $end
+$var reg 1 8 i_set $end
+$var reg 1 9 i_reset $end
+$var reg 1 : i_enable $end
+$var reg 1 ; o_q $end
+$var reg 1 < o_qbar $end
+$var reg 1 = int_q $end
+$var reg 1 > int_qbar $end
+$var reg 1 ? int_ssignal $end
+$var reg 1 @ int_rsignal $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+U#
+U$
+0%
+0&
+U'
+U(
+0)
+1*
+U+
+U,
+1-
+1.
+0/
+10
+11
+02
+13
+04
+15
+16
+07
+08
+19
+0:
+U;
+U<
+U=
+U>
+1?
+1@
+#10000000
+1"
+0#
+1$
+1&
+0'
+1(
+0.
+01
+17
+1:
+0;
+1<
+0=
+1>
+0@
+#20000000
+1!
+0"
+1%
+0&
+1)
+0*
+0-
+1.
+1/
+00
+11
+12
+03
+14
+05
+06
+18
+09
+0:
+1@
+#30000000
+1"
+1#
+0$
+1&
+1'
+0(
+0.
+01
+16
+1:
+1;
+0<
+1=
+0>
+0?
+#40000000
+0!
+0"
+0%
+0&
+0)
+1*
+1-
+1.
+0/
+10
+11
+02
+13
+04
+15
+07
+08
+19
+0:
+1?
+#50000000
+1"
+0#
+1$
+1&
+0'
+1(
+0.
+01
+17
+1:
+0;
+1<
+0=
+1>
+0@
+#60000000
+1!
+0"
+1%
+0&
+1)
+0*
+0-
+1.
+1/
+00
+11
+12
+03
+14
+05
+06
+18
+09
+0:
+1@
+#70000000
+1"
+1#
+0$
+1&
+1'
+0(
+0.
+01
+16
+1:
+1;
+0<
+1=
+0>
+0?
+#80000000
+0!
+0"
+0%
+0&
+0)
+1*
+1-
+1.
+0/
+10
+11
+02
+13
+04
+15
+07
+08
+19
+0:
+1?
+#90000000
+1"
+0#
+1$
+1&
+0'
+1(
+0.
+01
+17
+1:
+0;
+1<
+0=
+1>
+0@
+#100000000
+1!
+0"
+1%
+0&
+1)
+0*
+0-
+1.
+1/
+00
+11
+12
+03
+14
+05
+06
+18
+09
+0:
+1@
+#110000000
+1"
+1#
+0$
+1&
+1'
+0(
+0.
+01
+16
+1:
+1;
+0<
+1=
+0>
+0?
+#120000000
+0!
+0"
+0%
+0&
+0)
+1*
+1-
+1.
+0/
+10
+11
+02
+13
+04
+15
+07
+08
+19
+0:
+1?
+#130000000
+1"
+0#
+1$
+1&
+0'
+1(
+0.
+01
+17
+1:
+0;
+1<
+0=
+1>
+0@
+#140000000
+1!
+0"
+1%
+0&
+1)
+0*
+0-
+1.
+1/
+00
+11
+12
+03
+14
+05
+06
+18
+09
+0:
+1@
+#150000000
+1"
+1#
+0$
+1&
+1'
+0(
+0.
+01
+16
+1:
+1;
+0<
+1=
+0>
+0?
+#160000000
+0!
+0"
+0%
+0&
+0)
+1*
+1-
+1.
+0/
+10
+11
+02
+13
+04
+15
+07
+08
+19
+0:
+1?
+#170000000
+1"
+0#
+1$
+1&
+0'
+1(
+0.
+01
+17
+1:
+0;
+1<
+0=
+1>
+0@
+#180000000
+1!
+0"
+1%
+0&
+1)
+0*
+0-
+1.
+1/
+00
+11
+12
+03
+14
+05
+06
+18
+09
+0:
+1@
+#190000000
+1"
+1#
+0$
+1&
+1'
+0(
+0.
+01
+16
+1:
+1;
+0<
+1=
+0>
+0?
+#200000000
+0!
+0"
+0%
+0&
+0)
+1*
+1-
+1.
+0/
+10
+11
+02
+13
+04
+15
+07
+08
+19
+0:
+1?

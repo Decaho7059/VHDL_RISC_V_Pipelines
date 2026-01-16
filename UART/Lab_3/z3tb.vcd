@@ -1,0 +1,52 @@
+$date
+  Sun Nov 06 12:31:54 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module z3tb $end
+$var reg 1 ! z3out $end
+$var reg 1 " z3in $end
+$scope module z3gate $end
+$var reg 1 # z3in $end
+$var reg 1 $ z3out $end
+$var reg 1 % x3out $end
+$scope module u0 $end
+$var reg 1 & x3in $end
+$var reg 1 ' x3out $end
+$upscope $end
+$scope module u1 $end
+$var reg 1 ( y3in $end
+$var reg 1 ) y3out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+#20000000
+1!
+1"
+1#
+1$
+1%
+1&
+1'
+1(
+1)
+#40000000

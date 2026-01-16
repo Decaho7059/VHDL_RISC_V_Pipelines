@@ -1,0 +1,93 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity counter is
+    port (
+        GClock : in std_logic;
+        enable : in std_logic;
+        load : in std_logic;
+        d_input : in std_logic_vector(3 downto 0);
+
+        done : out std_logic
+
+    );
+end counter;
+
+architecture rtl of counter is
+
+    component d_ff is 
+
+        port(
+        
+            i_d : in std_logic;
+            i_clock : in std_logic;
+            o_q, o_qBar : out std_logic
+
+        );
+
+    end component d_ff;
+
+    signal d0, d1, d2, d3, q0, q1, q2, q3, qBar0, qBar1, qBar2, qBar3 : std_logic = '0';
+    signal dFlipFlopIn0, dFlipFlopIn1, dFlipFlopIn2, dFlipFlopIn3 : std_logic;
+    signal endCount: std_logic;
+    signal initalValue: std_logic_vector(3 downto 0);
+
+    begin 
+
+        d0 <= d_input(0);
+        d1 <= d_input(1);
+        d2 <= d_input(2);
+        d3 <= d_input(3);
+
+        dFlipFlopIn0 <= ( (q2 and not(q3)) ) or ( q0 and not(q3) ) or ( not(q2) and not(q3) );
+        dFlipFlopIn1 <= (q2 and q3) or (not(q2) and not(q3)) or (q0 and not(q2) and not(q3));
+        dFlipFlopIn2 <=  ( not(q0) and q1 and q2 ) or ( not(q0) and q1 and q3 ) or ( q0 and q1 and q2 ) or ( q0 and not(q1) and not(q2) and not(q3) ) ;
+        dFlipFlopIn3 <= ( q0 and q1 ) or ( q0 and q3 ) or ( q0 and q2 );
+        endCount <= not(q0) and not(q1) and not(q2) and not(q3);
+
+        initalValue <= "1111";
+
+        dflipflop0: d_ff port map (
+
+            i_d => dFlipFlopIn0,
+            i_clock => GClock,
+            
+            o_q => q0,
+            o_qBar => qBar0
+
+        );
+    
+        dflipflop1: d_ff port map (
+
+            i_d => dFlipFlopIn1,
+            i_clock => GClock,
+            
+            o_q => q1,
+            o_qBar => qBar1
+
+        );
+    
+        dflipflop2: d_ff port map (
+
+            i_d => dFlipFlopIn2,
+            i_clock => GClock,
+            
+            o_q => q2,
+            o_qBar => qBar2
+
+        );
+    
+        dflipflop3: d_ff port map (
+
+            i_d => dFlipFlopIn2,
+            i_clock => GClock,
+            
+            o_q => q2,
+            o_qBar => qBar2
+
+        );
+
+        done <= endCount;
+        
+
+end rtl;

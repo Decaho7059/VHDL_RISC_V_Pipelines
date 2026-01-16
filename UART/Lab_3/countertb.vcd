@@ -1,0 +1,301 @@
+$date
+  Fri Nov 11 20:07:24 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module countertb $end
+$var reg 1 ! gclock $end
+$var reg 1 " enable $end
+$var reg 1 # done $end
+$var reg 1 $ resetbar $end
+$var reg 4 % d_input[3:0] $end
+$var reg 4 & d_out[3:0] $end
+$scope module countertest $end
+$var reg 1 ' gclock $end
+$var reg 1 ( enable $end
+$var reg 4 ) d_input[3:0] $end
+$var reg 1 * resetbar $end
+$var reg 4 + d_out[3:0] $end
+$var reg 1 , done $end
+$var reg 1 - ynext0 $end
+$var reg 1 . ynext1 $end
+$var reg 1 / ynext2 $end
+$var reg 1 0 ynext3 $end
+$var reg 1 1 count0 $end
+$var reg 1 2 count1 $end
+$var reg 1 3 count2 $end
+$var reg 1 4 count3 $end
+$var reg 1 5 z $end
+$var reg 1 6 yinput0 $end
+$var reg 1 7 yinput1 $end
+$var reg 1 8 yinput2 $end
+$var reg 1 9 yinput3 $end
+$var reg 1 : qbar0 $end
+$var reg 1 ; qbar1 $end
+$var reg 1 < qbar2 $end
+$var reg 1 = qbar3 $end
+$var reg 1 > int_q0 $end
+$var reg 1 ? int_q1 $end
+$var reg 1 @ int_q2 $end
+$var reg 1 A int_q3 $end
+$var reg 1 B test $end
+$var reg 1 C i_resetbar $end
+$var reg 1 D int_qbar0 $end
+$var reg 1 E int_qbar1 $end
+$var reg 1 F int_qbar2 $end
+$var reg 1 G int_qbar3 $end
+$scope module dflipflop0 $end
+$var reg 1 H i_resetbar $end
+$var reg 1 I i_d $end
+$var reg 1 J i_enable $end
+$var reg 1 K i_clock $end
+$var reg 1 L o_q $end
+$var reg 1 M o_qbar $end
+$var reg 1 N int_q $end
+$upscope $end
+$scope module dflipflop1 $end
+$var reg 1 O i_resetbar $end
+$var reg 1 P i_d $end
+$var reg 1 Q i_enable $end
+$var reg 1 R i_clock $end
+$var reg 1 S o_q $end
+$var reg 1 T o_qbar $end
+$var reg 1 U int_q $end
+$upscope $end
+$scope module dflipflop2 $end
+$var reg 1 V i_resetbar $end
+$var reg 1 W i_d $end
+$var reg 1 X i_enable $end
+$var reg 1 Y i_clock $end
+$var reg 1 Z o_q $end
+$var reg 1 [ o_qbar $end
+$var reg 1 \ int_q $end
+$upscope $end
+$scope module dflipflop3 $end
+$var reg 1 ] i_resetbar $end
+$var reg 1 ^ i_d $end
+$var reg 1 _ i_enable $end
+$var reg 1 ` i_clock $end
+$var reg 1 a o_q $end
+$var reg 1 b o_qbar $end
+$var reg 1 c int_q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+1!
+1"
+U#
+1$
+b1111 %
+bUUUU &
+1'
+1(
+b1111 )
+1*
+bUUUU +
+U,
+U-
+U.
+U/
+U0
+U1
+U2
+U3
+U4
+U5
+U6
+U7
+U8
+U9
+U:
+U;
+U<
+U=
+U>
+U?
+U@
+UA
+UB
+UC
+UD
+UE
+UF
+UG
+1H
+UI
+1J
+1K
+UL
+UM
+UN
+1O
+UP
+1Q
+1R
+US
+UT
+UU
+1V
+UW
+1X
+1Y
+UZ
+U[
+U\
+1]
+U^
+1_
+1`
+Ua
+Ub
+Uc
+#10000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#20000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#30000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#40000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#50000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#60000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#70000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#80000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#90000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#100000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#110000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#120000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#130000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#140000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#150000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#160000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#170000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#180000000
+1!
+1'
+1K
+1R
+1Y
+1`
+#190000000
+0!
+0'
+0K
+0R
+0Y
+0`
+#200000000
+1!
+1'
+1K
+1R
+1Y
+1`

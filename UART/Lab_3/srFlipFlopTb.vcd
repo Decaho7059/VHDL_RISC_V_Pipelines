@@ -1,0 +1,77 @@
+$date
+  Sun Nov 06 13:26:57 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module srflipfloptb $end
+$var reg 1 ! i_set $end
+$var reg 1 " i_reset $end
+$var reg 1 # o_q $end
+$var reg 1 $ o_qbar $end
+$scope module flipflop $end
+$var reg 1 % set $end
+$var reg 1 & reset $end
+$var reg 1 ' q $end
+$var reg 1 ( qbar $end
+$var reg 1 ) int_q $end
+$var reg 1 * int_qbar $end
+$scope module snor $end
+$var reg 1 + x_nor $end
+$var reg 1 , y_nor $end
+$var reg 1 - z_nor $end
+$upscope $end
+$scope module rnor $end
+$var reg 1 . x_nor $end
+$var reg 1 / y_nor $end
+$var reg 1 0 z_nor $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+1"
+1#
+0$
+0%
+1&
+1'
+0(
+1)
+0*
+0+
+0,
+1-
+1.
+1/
+00
+#10000000
+1!
+0"
+0#
+1$
+1%
+0&
+0'
+1(
+0)
+1*
+1+
+1,
+0-
+0.
+0/
+10
+#20000000
+0!
+0%
+0+
+#30000000

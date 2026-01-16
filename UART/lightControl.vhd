@@ -1,0 +1,231 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity comp1bit is 
+	port(	a,b:in std_logic;
+			s:out std_logic);
+end comp1bit;
+
+architecture archComp1bit of comp1bit is
+begin
+	s<=not(a xor b);
+end archComp1bit;
+
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity comp4bits is
+	port(	a,b:in std_logic_vector(3 downto 0);
+			s:out std_logic);
+end comp4bits;
+
+architecture archComp4bits of comp4bits is
+	component comp1bit 
+		port(	a,b:in std_logic;
+				s:out std_logic);
+	end component;
+	signal sig:std_logic_vector(3 downto 0);
+begin
+	comp0:comp1bit port map(a=>a(0), b=>b(0), s=>sig(0));
+	comp1:comp1bit port map(a=>a(1), b=>b(1), s=>sig(1));
+	comp2:comp1bit port map(a=>a(2), b=>b(2), s=>sig(2));
+	comp3:comp1bit port map(a=>a(3), b=>b(3), s=>sig(3));
+	s<=sig(0) and sig(1) and sig(2) and sig(3); 	
+end archComp4bits;
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+entity mux41_1bit is
+	port(	sel1, sel0 : IN STD_LOGIC;
+			d3, d2, d1, d0 : IN STD_LOGIC;
+			s : OUT STD_LOGIC);
+end mux41_1bit;
+
+architecture arch_mux41_1bit of mux41_1bit is
+
+begin
+	s <= 	((not sel1)and(not sel0)and(d0)) or ((not sel1)and(sel0)and(d1))
+			or ((sel1)and(not sel0)and(d2)) or ((sel1)and(sel0)and(d3));
+end arch_mux41_1bit;
+
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity resetCmp is
+
+	port(	timeExp, clk: in std_logic;
+			reset : out std_logic );
+
+end resetCmp;
+
+architecture archResetCmp of resetCmp is
+
+
+begin
+
+	process(timeExp, clk) 
+	begin 
+		if (clk'Event and clk='1' and timeExp='1') then
+			reset <= '0';
+		end if;
+		if(timeExp='0') then 
+			reset <= '1';
+		end if;	
+		
+	end process;
+
+end archResetCmp;
+
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity dataPath is 
+	port(	clk, sel0, sel1: in std_logic;
+			greset: in std_logic;
+			mscMax, sscMax: in std_logic_vector(3 downto 0);
+			timeExp: out std_logic);
+end dataPath;
+
+
+architecture archDataPath of dataPath is
+	component comp4bits
+		port(	a,b:in std_logic_vector(3 downto 0);
+				s:out std_logic);
+	end component;
+	
+	component compt4bits
+		port(	clk:in std_logic;
+				reset:in std_logic;
+				q:out std_logic_vector(3 downto 0));
+	end component;
+	
+	component mux41_1bit
+		port(	sel1, sel0 : IN STD_LOGIC;
+				d3, d2, d1, d0 : IN STD_LOGIC;
+				s : OUT STD_LOGIC);
+	end component;
+	
+	component resetCmp
+		port(	timeExp, clk: in std_logic;
+				reset : out std_logic);
+	end component;
+	
+	signal qsig : std_logic_vector(3 downto 0);
+	signal msc, ssc, mst, sst : std_logic;
+	constant mstVal : std_logic_vector(3 downto 0):="0010";
+	constant sstVal : std_logic_vector(3 downto 0):="0010";
+	signal r_out, r, t : std_logic;
+	
+begin
+
+
+	r_out <= r and greset;
+	reset: resetCmp port map(timeExp=>t, clk=>clk, reset=>r);
+	compt: compt4bits port map(clk=>clk, reset=>r_out, q=>qsig);
+	compMsc: comp4bits port map(a=>qsig, b=>mscMax, s=>msc);
+	compSsc: comp4bits port map(a=>qsig, b=>sscMax, s=>ssc);
+	compMst: comp4bits port map(a=>qsig, b=>mstVal, s=>mst);
+	compSst: comp4bits port map(a=>qsig, b=>sstVal, s=>sst);
+	mux: mux41_1bit port map(sel0=>sel0, sel1=>sel1, d0=>msc, d1=>ssc,
+								d2=>mst, d3=>sst, s=>t);
+	timeExp <= t;
+			
+		
+end archDataPath;
+
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity controller is 
+	port(	sscs, timeExp, clk, greset : in std_logic;
+			mstl, sstl : out std_logic_vector(2 downto 0);
+			sel0, sel1 : out std_logic );
+end controller;
+
+
+architecture archController of controller is 
+
+	component bascDReset
+		PORT(
+				i_resetBar : IN STD_LOGIC;
+				i_d : IN STD_LOGIC;
+				i_enable : IN STD_LOGIC;
+				i_clock : IN STD_LOGIC;
+				--o_qBar : OUT STD_LOGIC;
+				o_q : OUT STD_LOGIC);
+	end component;
+
+	signal dsig, qsig : std_logic_vector(1 downto 0);
+	
+begin
+
+	basc0 : bascDReset port map(i_resetBar => greset, i_d => dsig(0), i_enable =>'1', i_clock => clk, o_q => qsig(0));
+	basc1 : bascDReset port map(i_resetBar => greset, i_d => dsig(1), i_enable =>'1', i_clock => clk, o_q => qsig(1));
+	
+	dsig(0) <= (qsig(0) and (not timeExp)) or ((not qsig(0)) and timeExp and sscs) or (qsig(1) and (not qsig(0)) and timeExp);
+	dsig(1) <= (qsig(1) and (not timeExp)) or (qsig(1) and (not qsig(0))) or ((not qsig(1)) and qsig(0) and timeExp);
+	sel0 <= qsig(1);
+	sel1 <= qsig(0);
+	mstl(0) <= qsig(1);
+	mstl(1) <= (not qsig(1)) and qsig(0);
+	mstl(2) <= (not qsig(0)) and (not qsig(1));
+	sstl(0) <= not qsig(1);
+	sstl(1) <= qsig(0) and qsig(1);
+	sstl(2) <= qsig(1) and (not qsig(0));
+	
+end archController;
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+entity lightControl is
+	port(	clk, reset, sscs : in std_logic;
+			mscMax, sscMax : in std_logic_vector(3 downto 0);
+			mstl, sstl : out std_logic_vector(2 downto 0));
+end lightControl;
+
+
+architecture archLightControl of lightControl is 
+
+	component dataPath
+		port(	clk, sel0, sel1: in std_logic;
+				greset: in std_logic;
+				mscMax, sscMax: in std_logic_vector(3 downto 0);
+				timeExp: out std_logic);
+	end component;
+	
+	component controller
+		port(	sscs, timeExp, clk, greset : in std_logic;
+				mstl, sstl : out std_logic_vector(2 downto 0);
+				sel0, sel1 : out std_logic );
+	end component;
+	
+	signal timesig : std_logic;
+	signal selsig : std_logic_vector(1 downto 0);
+
+
+begin
+
+	data : dataPath port map(clk=>clk, sel0=>selsig(0), sel1=>selsig(1), greset=>reset,
+							mscMax=>mscMax, sscMax=>sscMax, timeExp=>timesig);
+	
+	contr : controller port map(sscs=>sscs, timeExp=>timesig, clk=>clk, greset=>reset,
+								mstl=>mstl, sstl=>sstl, sel0=>selsig(0), sel1=>selsig(1));
+
+
+
+end archLightControl;
+
+
+

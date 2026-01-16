@@ -1,0 +1,25 @@
+ghdl -i --workdir=work enabledDFF.vhd
+ghdl -m --workdir=work enabledDFF    
+
+
+ghdl -i --workdir=work down_counter_4bits.vhd
+ghdl -m --workdir=work down_counter_4bits    
+
+ghdl -i --workdir=work down_counter_4bitstb.vhd
+ghdl -m --workdir=work down_counter_4bitstb   
+
+ghdl -r --workdir=work down_counter_4bitstb --vcd=down_counter_4bits.vcd --stop-time=200ns
+
+gtkwave down_counter_4bits.vcd 
+
+
+ghdl -i --workdir=work counter.vhd
+ghdl -m --workdir=work counter   
+
+
+ghdl -i --workdir=work countertb.vhd
+ghdl -m --workdir=work countertb 
+
+ghdl -r --workdir=work countertb --vcd=countertb.vcd --stop-time=200ns
+
+gtkwave countertb.vcd
